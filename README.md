@@ -1,16 +1,15 @@
 ## This portfolio displays some of my data science work in Python.
 
-![image](images/RachelCooper_photo.jpg, "Rachel")
-
-![photo](https://github.com/[Rachel-0]/[Portfolio]/blob/[images]/RachelCooper_photo.jpg?raw=true)
+![image](RachelCooper_photo.png)
+<img src="drawing.jpg" alt="image" width="200"/>
 
 
 ## Project 1:
 ## Team project for National Childbirth Trust
-### Description
-### images
+<!-- ### Description -->
+<!-- ### images -->
 
-## Project 2:
-## Government petitions
-### Description
-### images
+<!-- ## Project 2: -->
+<!-- ## Government petitions -->
+<!-- ### Description -->
+<!-- ### images -->
