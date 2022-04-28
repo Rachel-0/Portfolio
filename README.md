@@ -1,3 +1,6 @@
 ## This portfolio displays some of my data science work in Python.
 
-![image](RachelCooper_photo.jpg, "This is me")
+![image] (RachelCooper_photo.jpg, "Rachel")
+
+
+
