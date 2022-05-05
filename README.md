@@ -15,6 +15,12 @@
 
 ### NCT branch 'catchment areas' were defined using Voronoi tesselation based on previous customer travel patterns.
 
+<p align="right">
+  <img width="350" src="customer_travel.png">
+</p>
+
+##### Customer travel from home postcaode to an example NCT branch. Blue areas represent NCT branch areas. Colourmap indicates mean annual income of the population.
+
 ### A random forest regression model was developed to predict demand (demand defined as bookings per 1000 births normalised by geographical area)
 ###
 
@@ -29,6 +35,8 @@
 <p align="right">
   <img width="350" src="kmeans_branches.png">
 </p>
+
+##### Reassignment of branch pricing following K-means clustering.
 
 ### We recommend testing some of our suggested price changes to monitor the effect on bookings. As an upper estimate we expect a 6% increase in funding for the next financial year. 
 <!-- ### images -->
