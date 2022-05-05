@@ -22,7 +22,7 @@
   <img width="350" src="competitor_distance.png">
 </p>
 
-#### Actual and predicted bookings per 1000 births. Colour indicates 
+#### Actual and predicted bookings per 1000 births. Colour indicates proximity to a competitor venue.
 
 ### K-means clustering was used to group NCT branches with similar customer characteristics. This was used to inform our suggested price bandings for courses in different locations.
 ###
