@@ -1,7 +1,9 @@
 ## This portfolio displays some of my data science work in Python.
 
-![image](RachelCooper_photo.png)
-<img src="drawing.jpg" alt="image" width="200"/>
+<p align="right">
+  <img width="100" src="RachelCooper_photo.png">
+</p>
+
 
 
 ## Project 1:
