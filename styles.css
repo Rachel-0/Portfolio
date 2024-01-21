@@ -12,9 +12,9 @@
   font-family: inherit;
   font-size: inherit;
   box-shadow: none;
-  box-sizing: border-box;
+  box-sizing: content-box;
 }
-
+ 
 html {
   scroll-behavior: smooth;
 }
@@ -26,11 +26,21 @@ html {
   background-color: var(--clr-bg);
 } */
 
+/* 
 body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+  position: relative;
+} */
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+  background: url('background2.jpg') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
 }
 
@@ -41,29 +51,80 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('background_image.jpg') no-repeat center center;
-  background-size: cover;
-  opacity: 0.5;
+  background-color: var(--clr-overlay);
+  opacity: 0.7;
   z-index: -1;
 }
 
-.light {
-  --clr-bg: #FFE4E1;
-  --clr-bg-alt: #fff;
-  --clr-fg: #fff;
-  --clr-fg-alt: #BC8F8F;
-  --clr-primary: #BF3EFF;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.top-left-image {
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  max-width: 140px; /* Adjust the size as needed */
+  height: auto;
+  z-index: 10; /* Ensure it's above other elements */
+  box-shadow: var(--shadow);
+}
+
+
+/* body {
+  content: "";
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('background_image.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.8;
+  z-index: -1;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  color: var(--clr-fg);
+} */
+
+/* .light {
+  --clr-bg: #3d5a80;
+  --clr-bg-alt: #293241;
+  --clr-fg: #e0fbfc;
+  --clr-fg-alt: #3d5a80;
+  --clr-primary: #ee6c4d;
+  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  --clr-overlay: rgba(249, 220, 196, 0.709);
 }
 
 .dark {
-  --clr-bg: #383838;
-  --clr-bg-alt: #121212;
-  --clr-fg: #FFE4E1;
-  --clr-fg-alt: #BF3EFF;
-  --clr-primary: #BC8F8F;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-bg: #3d5a80;
+  --clr-bg-alt: #293241;
+  --clr-fg: #e0fbfc;
+  --clr-fg-alt: #98c1d9;
+  --clr-primary: #ee6c4d;
+  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  --clr-overlay: rgba(41, 50, 65, 0.9);
+} */
+
+.light {
+  --clr-bg: #f4f3ee;
+  --clr-bg-alt: #bcb8b1;
+  --clr-fg: #463f3a;
+  --clr-fg-alt: #0a745d;
+  --clr-primary: #463f3a;
+  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  --clr-overlay: rgba(244, 243, 238, 0.864);
+}
+
+.dark {
+  --clr-bg: #463f3a;
+  --clr-bg-alt: #bcb8b1;
+  --clr-fg: #f4f3ee;
+  --clr-fg-alt: #57cc99;
+  --clr-primary: #f4f3ee;
+  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  --clr-overlay: rgba(70, 63, 58, 0.9);
 }
 
 ::-moz-selection {
