@@ -52,7 +52,7 @@ body::before {
   right: 0;
   bottom: 0;
   background-color: var(--clr-overlay);
-  opacity: 0.7;
+  /* opacity: 0.7; */
   z-index: -1;
 }
 
@@ -107,16 +107,16 @@ body::before {
 } */
 
 .light {
-  --clr-bg: #463f3a;
-  --clr-bg-alt: #b1aa9e;
-  --clr-fg: #f4f3ee;
-  --clr-fg-alt: #57cc99;
-  --clr-primary: #f4f3ee;
+  --clr-bg: #ff5a5f;
+  --clr-bg-alt: #c81d25;
+  --clr-fg: #c81d25;
+  --clr-fg-alt: #087e8b;
+  --clr-primary: #ff5a5f;
   --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: #0000008c;
+  --clr-overlay: #f7ede2d4;
   --proj-bgd: rgba(177, 170, 158, 0);
-  --clr-boxes: #b1aa9e88;
+  --clr-boxes: #ff5a609d;
 }
 
 .dark {
@@ -127,7 +127,7 @@ body::before {
   --clr-primary: #f4f3ee;
   --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: rgb(16, 0, 15);
+  --clr-overlay: rgba(16, 0, 15, 0.785);
   --proj-bgd: rgba(177, 170, 158, 0);
   --clr-boxes: #b1aa9e94;
 }
@@ -242,6 +242,7 @@ button {
   overflow: hidden;
   z-index: 1;
   border-radius: 10px;
+  margin-top: 1em;
 }
 
 .btn--outline:focus,
@@ -269,8 +270,7 @@ button {
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-boxes);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: .2;
+  box-shadow: var(--shadow);
 }
 
 .btn--plain:hover {
@@ -383,9 +383,9 @@ main {
 }
 
 .project {
-  background-color: var(--proj-bgd);
+  /* background-color: var(--clr-overlay); */
   padding: 2em;
-  margin: 0 auto;
+  margin: 2 auto;
   border-radius: 15px;
   text-align: center;
   box-shadow: var(--shadow);
