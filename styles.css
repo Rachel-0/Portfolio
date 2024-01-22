@@ -107,16 +107,16 @@ body::before {
 } */
 
 .light {
-  --clr-bg: #ff5a5f;
-  --clr-bg-alt: #c81d25;
-  --clr-fg: #c81d25;
-  --clr-fg-alt: #087e8b;
-  --clr-primary: #ff5a5f;
+  --clr-bg: #FFE5AD;
+  --clr-bg-alt: #982176;
+  --clr-fg: #3E001F;
+  --clr-fg-alt: #F11A7B;
+  --clr-primary: #3E001F;
   --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
   --clr-overlay: #f7ede2d4;
   --proj-bgd: rgba(177, 170, 158, 0);
-  --clr-boxes: #ff5a609d;
+  --clr-boxes: #ffe5ad9f;
 }
 
 .dark {
@@ -506,4 +506,23 @@ main {
   .scroll-container {
     display: none;
   }
+}
+
+
+/*========
+  Project pages
+========*/
+
+
+.project-details {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
