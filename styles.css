@@ -58,12 +58,13 @@ body::before {
 
 .top-left-image {
   position: absolute;
-  top: 3em;
-  left: 1em;
+  top: 3.5em;
+  left: 1.8em;
   max-width: 140px; /* Adjust the size as needed */
   height: auto;
   z-index: 10; /* Ensure it's above other elements */
   box-shadow: var(--shadow);
+  border: .2;
 }
 
 
@@ -106,25 +107,29 @@ body::before {
 } */
 
 .light {
-  --clr-bg: #f4f3ee;
-  --clr-bg-alt: #bcb8b1;
-  --clr-fg: #463f3a;
-  --clr-fg-alt: #0a745d;
-  --clr-primary: #463f3a;
-  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: rgba(244, 243, 238, 0.864);
-}
-
-.dark {
   --clr-bg: #463f3a;
-  --clr-bg-alt: #bcb8b1;
+  --clr-bg-alt: #b1aa9e;
   --clr-fg: #f4f3ee;
   --clr-fg-alt: #57cc99;
   --clr-primary: #f4f3ee;
   --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: rgba(70, 63, 58, 0.9);
+  --clr-overlay: #0000008c;
+  --proj-bgd: rgba(177, 170, 158, 0);
+  --clr-boxes: #b1aa9e88;
+}
+
+.dark {
+  --clr-bg: #463f3a;
+  --clr-bg-alt: #968e81;
+  --clr-fg: #f4f3ee;
+  --clr-fg-alt: #57cc99;
+  --clr-primary: #f4f3ee;
+  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+  --clr-overlay: rgb(16, 0, 15);
+  --proj-bgd: rgba(177, 170, 158, 0);
+  --clr-boxes: #b1aa9e94;
 }
 
 ::-moz-selection {
@@ -236,6 +241,7 @@ button {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  border-radius: 10px;
 }
 
 .btn--outline:focus,
@@ -246,7 +252,7 @@ button {
 .btn--outline:before {
   content: "";
   position: absolute;
-  background-color: var(--clr-primary);
+  background-color: var(--clr-bg-alt);
   right: 100%;
   bottom: 0;
   left: 0;
@@ -262,13 +268,13 @@ button {
 
 .btn--plain {
   text-transform: initial;
-  background-color: var(--clr-bg-alt);
+  background-color: var(--clr-boxes);
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: 0;
+  border: .2;
 }
 
 .btn--plain:hover {
-  transform: translateY(-4px);
+  /* transform: translateY(-4px); */
 }
 
 .btn--icon {
@@ -337,12 +343,17 @@ main {
   margin-top: 3em;
 }
 
-.about__name {
+.about__intro {
   color: var(--clr-primary);
+}
+
+.about__name {
+  color: var(--clr-fg-alt);
 }
 
 .about__role {
   margin-top: 1.2em;
+  color: var(--clr-bg-alt); 
 }
 
 .about__desc {
@@ -372,8 +383,10 @@ main {
 }
 
 .project {
+  background-color: var(--proj-bgd);
   padding: 2em;
   margin: 0 auto;
+  border-radius: 15px;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
@@ -416,6 +429,7 @@ main {
 
 .skills__list-item {
   margin: 0.5em;
+  border-radius: 10px;
 }
 
 .contact {
