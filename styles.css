@@ -375,15 +375,16 @@ main {
 }
 
 .projects__grid {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 50000px; /* Adjust as needed */
+  /* margin: 0 auto; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
-  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(0%, 67%));
+  gap: 2%;
+  justify-content: center;
 }
 
+
 .project {
-  /* background-color: var(--clr-overlay); */
   padding: 2em;
   margin: 2 auto;
   border-radius: 15px;
@@ -392,8 +393,10 @@ main {
   transition: transform 0.2s linear;
 }
 
+
 .project:hover {
   transform: translateY(-7px);
+  background-color: var(--clr-overlay);
 }
 
 .project__description {
@@ -416,6 +419,12 @@ main {
 
 .project .link--icon {
   margin-left: 0.5em;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .skills__list {
@@ -526,3 +535,4 @@ main {
   display: block;
   margin: 0 auto;
 }
+
