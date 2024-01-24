@@ -13,12 +13,20 @@
 </head>
 <body class="light" id="top"></body>
   <header class="header center">
-    <button type="button" aria-label="toggle theme" class="btn btn--icon">
-      <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
-    </button>
     <nav>
       <a href="index.html">Home</a> <!-- Link back to the main page -->
     </nav>
+    <button type="button" aria-label="toggle theme" class="btn btn--icon">
+        <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+      </button>
+
+      <button
+        type="button"
+        aria-label="toggle navigation"
+        class="btn btn--icon nav__hamburger"
+      >
+        <i aria-hidden="true" class="fas fa-bars"></i>
+      </button>
   </header>
 
   <main>
@@ -35,7 +43,9 @@
       <p class="about__desc">
         Discuss the key findings from your analysis. Highlight any interesting insights or patterns discovered during the project.
       </p>
+
       <img src="competitor_distance.png" alt="Project Image" class="project-image">
+
       <h2 class="project-subtitle"> Conclusion</h2>
       <p class="about__desc">
         Summarize the project outcomes and any future work or improvements that could be made.
@@ -63,5 +73,6 @@
       ~ Created By Rachel Cooper ~
     </a>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>

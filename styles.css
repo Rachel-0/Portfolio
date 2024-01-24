@@ -223,7 +223,7 @@ button {
 
 .link--icon {
   color: var(--clr-fg);
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .btn {
@@ -558,6 +558,8 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 1em;
+  margin-top: 1.5em;
+  text-align: center;
 }
 
 .project-image {
@@ -565,5 +567,20 @@ main {
   height: auto;
   display: block;
   margin: 0 auto;
+  margin-top: 1.5em;
 }
 
+.project-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  text-align: center;
+}
+
+.project-subtitle {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  margin-top: 3em;
+  text-align: center;
+}
