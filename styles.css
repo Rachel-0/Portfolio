@@ -39,7 +39,7 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.5;
   color: var(--clr-fg);
-  background: url('PXL_20231118_110525515.MP.jpg') no-repeat center center fixed;
+  background: url('PXL_20231115_094428093.MP~2.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
 }
@@ -516,6 +516,37 @@ main {
     display: none;
   }
 }
+
+.share {
+  position: fixed; /* Or 'sticky' if you prefer */
+  top: 50%; /* Adjust as needed */
+  right: 0; /* Place on the right side of the page */
+  transform: translateY(-50%); /* Center vertically */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+.a2a_kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the icons horizontally */
+  justify-content: center; /* Center the icons vertically, if needed */
+}
+
+.a2a_kit a {
+  margin-bottom: 15px;
+  font-size: 5px; /* Adjust the size as needed */
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  display: inline-block;
+}
+
+.a2a_kit a img {
+  max-width: 30%;
+  height: auto;
+}
+
+
+
 
 
 /*========
