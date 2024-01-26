@@ -19,21 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  color: var(--clr-fg);
-  background-color: var(--clr-bg);
-} */
 
-/* 
-body {
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  color: var(--clr-fg);
-  background-color: var(--clr-bg);
-  position: relative;
-} */
 
 body {
   font-family: "Poppins", sans-serif;
@@ -68,43 +54,7 @@ body::before {
 }
 
 
-/* body {
-  content: "";
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('background_image.jpg') no-repeat center center;
-  background-size: cover;
-  opacity: 0.8;
-  z-index: -1;
-  font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  color: var(--clr-fg);
-} */
 
-/* .light {
-  --clr-bg: #3d5a80;
-  --clr-bg-alt: #293241;
-  --clr-fg: #e0fbfc;
-  --clr-fg-alt: #3d5a80;
-  --clr-primary: #ee6c4d;
-  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: rgba(249, 220, 196, 0.709);
-}
-
-.dark {
-  --clr-bg: #3d5a80;
-  --clr-bg-alt: #293241;
-  --clr-fg: #e0fbfc;
-  --clr-fg-alt: #98c1d9;
-  --clr-primary: #ee6c4d;
-  --shadow: rgba(0, 0, 0, 0.5) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
-  --clr-overlay: rgba(41, 50, 65, 0.9);
-} */
 
 :root {
   --background-image-light: url('light_abstract_1.png');
@@ -320,7 +270,40 @@ button {
   width: 95%;
   margin: 0 auto;
   justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
+
+/* Project pages
+ */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 30px; /* Adjust as needed */
+  right: 30px; /* Adjust as needed */
+  gap: 20px; /* Space between buttons */
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  font-size: 1.9rem;
+  padding: 0 0 0.3em 0;
+}
+
+.home-link {
+  text-decoration: none;
+  color: inherit; /* Or a specific color */
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+  padding: 0 0 0.3em 0;
+  /* display: block; */
+  /* padding: 0.8em 1.4em; */
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+/* 
+ */
+
 
 main {
   max-width: 1100px;
@@ -373,6 +356,8 @@ main {
 .about__desc {
   font-size: 1rem;
   max-width: 600px;
+  column-count: 2; /* Create two columns */
+  column-gap: 20px;
 }
 
 .about__desc,
@@ -480,6 +465,12 @@ main {
   background-color: transparent;
   font-size: 1.8rem;
   transition: transform 0.2s ease-in-out;
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .about__desc {
+    column-count: 1;
+  }
 }
 
 @media (max-width: 600px) {
@@ -590,7 +581,7 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 1em;
-  text-align: center;
+  text-align: left;
 }
 
 .project-subtitle {
@@ -599,4 +590,5 @@ main {
   padding: 1em;
   margin-top: 2.5em;
   text-align: center;
+  color: var(--clr-bg-alt);
 }
