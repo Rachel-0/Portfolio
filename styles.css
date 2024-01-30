@@ -350,6 +350,7 @@ main {
 
 .about__role {
   margin-top: 1.2em;
+  font-size: 1rem;
   color: var(--clr-bg-alt); 
 }
 
@@ -601,11 +602,17 @@ main {
   color: var(--clr-bg-alt);
 }
 
+.proj_overview{
+  margin-top: 1.2em;
+  font-size: 1.2rem;
+  color: var(--clr-bg-alt);
+}
+
 .about__desc_proj {
   font-size: 1rem;
   max-width: 900px;
   column-count: 3; /* Create two columns */
-  column-gap: 20px;
+  column-gap: 23px;
   color: var(--clr-primary);
   text-align: justify;
 }
