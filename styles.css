@@ -44,9 +44,9 @@ body::before {
 
 .top-left-image {
   position: absolute;
-  top: 3.5em;
+  top: 4.5em;
   left: 1.8em;
-  max-width: 140px; /* Adjust the size as needed */
+  max-width: 150px; /* Adjust the size as needed */
   height: auto;
   z-index: 10; /* Ensure it's above other elements */
   box-shadow: var(--shadow);
@@ -350,15 +350,16 @@ main {
 
 .about__role {
   margin-top: 1.2em;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--clr-bg-alt); 
 }
 
 .about__desc {
-  font-size: 1rem;
+  font-size: 1.1rem;
   max-width: 600px;
-  column-count: 2; /* Create two columns */
-  column-gap: 20px;
+  /* column-count: 2; Create two columns */
+  /* column-gap: 23px; */
+  text-align: justify;
 }
 
 .about__desc,
