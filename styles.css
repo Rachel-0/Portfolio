@@ -578,17 +578,34 @@ main {
 }
 
 .project-section {
-  max-width: 800px;
-  margin: 0 auto;
+  /* max-width: 800px; */
   padding: 1em;
-  text-align: left;
+  text-align: center;
+  max-width: 90%; 
+  width: 100%; /* Set width to 100% of the parent container */
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    max-width: 100%; /* Full width on smaller screens */
+  }
 }
 
 .project-subtitle {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 1em;
   margin-top: 2.5em;
   text-align: center;
   color: var(--clr-bg-alt);
+}
+
+.about__desc_proj {
+  font-size: 1rem;
+  max-width: 900px;
+  column-count: 3; /* Create two columns */
+  column-gap: 20px;
+  color: var(--clr-primary);
+  text-align: justify;
 }
