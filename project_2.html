@@ -1,49 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2 - Data Science Project</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your main CSS file -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Project 2 - Isochrone analysis of delivery drivers</title>
 </head>
-<body>
-  <header>
-    <!-- Header content (You can include navigation back to the main page) -->
-    <nav>
-      <a href="index.html">Home</a> <!-- Link back to the main page -->
+<body class="light" id="top"></body>
+<header class="header">
+    <nav class="nav">
+      <!-- Navigation links (if any) -->
     </nav>
+    <div class="header-controls">
+      <a href="index.html" class="home-link">Home</a>
+      <button type="button" class="theme-toggle">
+        <i class="fas fa-moon" id="btn-theme"></i>
+      </button>
+    </div>
   </header>
+  
 
-  <main>
-    <section class="project-details">
-      <h1>Project 2: Data Science Project</h1>
-      <img src="competitor_distance.png" alt="Project Image" class="project-image">
-      <p>
-        Brief description of Project 1. You can talk about the goals, data used, analysis performed, and results achieved.
-      </p>
-      <h2>Project Overview</h2>
-      <p>
-        Detailed information about the project. Explain the problem statement, your approach, methodologies used, and any tools or technologies employed.
-      </p>
-      <h2>Key Findings and Insights</h2>
-      <p>
-        Discuss the key findings from your analysis. Highlight any interesting insights or patterns discovered during the project.
-      </p>
-      <h2>Conclusion</h2>
-      <p>
-        Summarize the project outcomes and any future work or improvements that could be made.
-      </p>
-    </section>
-  </main>
 
-  <footer> class="footer">
-    <a
-        href="https://github.com/Rachel-0/Portfolio"
-        class="link footer__link"
-    >
+  <body>
+    <main>
+        <div class="about center">
+            <h1 class="about__name">Project 2 -
+              <br> Isochrone analysis of couriers</h1>
+        </div>
+      <section class="project-section">
+        <h2 class="project-subtitle">Project Overview</h2>
+        <p class="proj_overview">
+          This project was commissioned by a UK parcel logistics company. Data from previous and current
+          couriers were used to analyse the location and the distance typically driven to each
+           depot from home. Isochrones were created and plotted onto an interactive mapping tool
+           for the client to use. Insights on the variation in driving time across the UK, as well as
+           location-specific business advice were presented.
+        </p>
+        <h2 class="project-subtitle">Data preprocessing</h2>
+
+
+        <div class="Project_content-container">
+          <p class="about__desc_proj_2col">
+              The data provided typically includes a unique applicant ID, academic background,
+              demographic variables, home location, application date, and enrolment status
+              (enrolled or didn't enroll). These data are first cleaned which usually involves
+              deduplicating rows, handling null values, checking variable distributions and proportions,
+              using NLP techniques to clean and validate applicant postcodes.
+              <br>
+              <br> The data are then enriched by
+              geolocating the home address, calculating the distance to campus (Haversine distance),
+              and merging the Index of Multiple Deprivation (IMD) with the applicant data on location.
+              This is done using the Geopandas library with a spatial join on applicant postcode (point)
+              and LSOA area (polygon).
+          <!-- </p> -->
+            <div class="image-container">
+              <img src="imd_student_loc_edited.png" alt="Project Image" class="project-image_inline">
+              <p class="figure_desc_inline">
+                  Heatmap showing applicant location and corresponding IMD score for their postcode. 
+                  Higher scores indicate higher levels of deprivation.
+              </p>
+            </p>
+        </div>
+      </div>
+      
+
+        <h2 class="project-subtitle">Modelling</h2>
+        <p class="about__desc_proj">
+          The data are by nature unbalanced because a typical university enrols approximately 20% 
+          of applicants. To correct this and improve the accuracy of the model, SMOTE was used 
+          to produce dummy data for the training sample following an 80-20 train lest split.
+           t tests and chi-square tests were used to
+           inform feature selection. The features for which enrolment status had a significant 
+           effect were entered into the initial model. Logistic regression was the performed on 
+           the training sample of data using the selected features. The Statsmodels library was used. 
+           Distance to campus followed by 
+           age were typically the best predictors of enrolment status. IMD score and a subset 
+           of the IMD, education score were often significant predictors in addition.
+           <br>
+           <br> A final model was selected based on the F1 score in the regression while 
+           looking for a balance between precision and recall, and by observing the confusion matrix.
+           Multicolinearity was avoided by selecting variables with minimal or no correlation.
+           The model was then applied to the original dataset (without SMOTE) in order to calculate 
+          the predicted probability that each applicant would enrol. For the purpose of this 
+          project it was important to observe a non-binary distribution of predicted probabilities.
+          This allows for applicants to be grouped by enrolment likelihood, for sufficient quantity 
+          in each group, and for these groups to be demarcated. A total of four segmentation groups
+          was considered a practical number to allow universities to make business decisions.
+          <br> 
+        </p>
+        
+        <img src="segmentation_correlation_matrix_alpha.png" alt="Project Image" class="project-image", style="width: 600px; height: auto;">
+        <p class="figure_desc">
+          Correlation matrix demonstrating the relationships between selected features for
+           one example model. Colours indicate probability of enrolment.
+        </p>
+
+        <img src="propensity_fig.png" alt="Project Image" class="project-image", style="width: 600px; height: auto;">
+        <p class="figure_desc">
+          Volume of applicants in each segmented group and their corresponding propensity for enrolment.
+        </p>
+
+
+        
+        <h2 class="project-subtitle">Conclusion</h2>
+        <p class="about__desc_proj">
+          This analysis was performed separately for clearing applicants and for each faculty,
+          campus and level of study the university required, subject to sample size. For some clients,
+           the impact of covid was also assessed.
+          Descriptive statistics of each segmented group were presented to the university
+          along with expert domain business advice from my colleauges. This included competitor 
+          market share for these applicants, advice on entry requirements, and advice on how to 
+          use these findings to target marketing efforts based on location and messaging.
+        </p>
+      </section>
+  
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="https://www.linkedin.com/in/rachel-cooper001/" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:rachel.cooper01@gmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+  
+      <!-- Share -->
+      <section class="share" id="share">
+        <h2 class="about__desc">Share</h2>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+          <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <a class="a2a_button_whatsapp"></a>
+          <a class="a2a_button_linkedin"></a>
+          <a class="a2a_button_microsoft_teams"></a>
+        </div>
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
+      </section>
+    </main>
+  
+    <footer class="footer">
+      <a href="https://github.com/Rachel-0/Portfolio" class="link footer__link">
         ~ Created By Rachel Cooper ~
-    </a>
-  </footer>
-</body>
-</html>
-
+      </a>
+    </footer>
+    <div class="scroll-container">
+        <div class="scroll-top">
+          <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+        </div>
+    
+    <script src="./script.js"></script>
+  </body>
+  </html>
+  
