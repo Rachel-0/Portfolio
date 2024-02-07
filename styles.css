@@ -614,16 +614,18 @@ main {
   align-items: flex-start; /* Adjust if you want the text to align at the top */
   justify-content: space-between; /* Space between the text and image */
   flex-wrap: wrap; /* Wrap items on smaller screens */
+  max-width: 900px; /* Match width with other text boxes */
+  margin: auto; /* Center the container */
 }
 
 .about__desc_proj_2col {
   font-size: 1rem;
-  max-width: 900px; /* Adjust based on your layout needs */
+  max-width: calc(100% - 420px); /* Reduce max-width to give less space for text */
   color: var(--clr-primary);
   text-align: justify;
-  flex: 3; /* Allows the text to take more space */
-  margin-right: 20px; /* Space between the text and the image */
-  column-count: 2; /* Create two columns */
+  flex: 1; /* Allows the text to fill available space */
+  margin-right: 20px; /* Maintain space between the text and the image */
+  column-count: 1; /* Create two columns */
   column-gap: 35px;
 }
 
@@ -639,17 +641,54 @@ main {
 }
 
 .project-image_inline {
-  flex-basis: 350px; /* Base width for the image */
+  /* flex-basis: 350px; Base width for the image */
   height: auto; /* Maintain aspect ratio */
   max-width: 100%; /* Prevent overflow */
-  width: 350px; /* Fixed width, adjust as needed */
+  width: 500px; /* Fixed width, adjust as needed */
   order: 2; /* Ensures image is on the right */
+  margin-left: 25px; 
+  flex-basis: calc(500px + 25px); /* Increase flex-basis to give more space to the image */
+  flex: 2;
 }
+
+.figure_desc {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em;
+  margin-top: 1.5em;
+  text-align: left;
+  color: var(--clr-fg-alt);
+  font-size: .8rem;
+}
+
+.figure_desc_inline {
+  /* max-width: 500px; */
+  margin: 0 auto;
+  padding: 1em;
+  margin-top: 1.5em;
+  text-align: left;
+  color: var(--clr-fg-alt);
+  font-size: .8rem;
+
+  /* text-align: justify; If you want the text justified */
+  max-width: 400px; /* Match the width of the image or adjust as needed */
+  margin-left: auto; /* Center the description under the image */
+  margin-right: auto; /* Center the description under the image */
+}
+
+.image-container {
+  flex-basis: 500px; /* Adjust based on image width */
+  order: 2; /* Ensure it's placed on the right */
+  text-align: center; /* Center the content if needed */
+  flex: 2;
+}
+
 
 
 @media (max-width: 768px) {
   .Project_content-container {
     flex-direction: column;
+    max-width: 100%; /* Allow container to expand */
   }
 
   .about__desc_proj, .project-image_inline {
@@ -661,5 +700,6 @@ main {
 
   .project-image_inline {
     margin-top: 20px; /* Space above the image when stacked */
+    margin-left: 0; /* Reset margin-left */
   }
 }
