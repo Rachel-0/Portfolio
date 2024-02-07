@@ -42,7 +42,23 @@
              Universities use this insight to target their recruitment efforts.
         </p>
         <h2 class="project-subtitle">Data preprocessing</h2>
-        <p class="about__desc_proj">
+
+
+        <div class="Project_content-container">
+          <p class="about__desc_proj_2col">
+              The data provided typically includes a unique applicant ID, academic background,
+              demographic variables, home location, application date, and enrolment status
+              (enrolled or didn't enrol). These data are first cleaned and then enriched by
+              geolocating the home address, calculating the distance to campus (Haversine distance),
+              and merging the Index of Multiple Deprivation (IMD) with the applicant data on location.
+              This is done using the Geopandas library with a spatial join on applicant postcode (point)
+              and LSOA area (polygon).
+          </p>
+          <img src="imd_student_loc_edited.png" alt="Project Image" class="project-image_inline">
+      </div>
+
+
+        <!-- <p class="about__desc_proj">
           The data provided typically includes a unique applicant ID, academic background,
            demographic variables, home location, application date, and enrolment status 
            (enroled or didn't enrol). These data are first cleaned and then enriched by
@@ -52,7 +68,13 @@
              This is done using the Geopandas library with a spatial join on applicant postcode (point) 
              and LSOA area (polygon).
              <br> 
-        </p>
+
+             <img src="imd_student_loc_edited.png" alt="Project Image" class="project-image", style="width: 600px; height: auto; flex-wrap: wrap;">
+
+        </p> -->
+
+        <!-- <img src="imd_student_loc_edited.png" alt="Project Image" class="project-image", style="width: 600px; height: auto; flex-wrap: wrap;"> -->
+
         <h2 class="project-subtitle">Modelling</h2>
         <p class="about__desc_proj">
           The data are by nature unbalanced because a typical university enrols approximately 20% 

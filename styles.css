@@ -609,11 +609,57 @@ main {
   color: var(--clr-bg-alt);
 }
 
-.about__desc_proj {
+.Project_content-container {
+  display: flex;
+  align-items: flex-start; /* Adjust if you want the text to align at the top */
+  justify-content: space-between; /* Space between the text and image */
+  flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.about__desc_proj_2col {
   font-size: 1rem;
-  max-width: 900px;
-  column-count: 3; /* Create two columns */
-  column-gap: 23px;
+  max-width: 900px; /* Adjust based on your layout needs */
   color: var(--clr-primary);
   text-align: justify;
+  flex: 3; /* Allows the text to take more space */
+  margin-right: 20px; /* Space between the text and the image */
+  column-count: 2; /* Create two columns */
+  column-gap: 35px;
+}
+
+.about__desc_proj {
+  font-size: 1rem;
+  max-width: 900px; /* Adjust based on your layout needs */
+  color: var(--clr-primary);
+  text-align: justify;
+  flex: 3; /* Allows the text to take more space */
+  margin-right: 20px; /* Space between the text and the image */
+  column-count: 3; /* Create two columns */
+  column-gap: 35px;
+}
+
+.project-image_inline {
+  flex-basis: 350px; /* Base width for the image */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevent overflow */
+  width: 350px; /* Fixed width, adjust as needed */
+  order: 2; /* Ensures image is on the right */
+}
+
+
+@media (max-width: 768px) {
+  .Project_content-container {
+    flex-direction: column;
+  }
+
+  .about__desc_proj, .project-image_inline {
+    max-width: 100%; /* Full width for smaller screens */
+    flex-basis: auto; /* Reset flex-basis for stacking */
+    order: unset; /* Reset order */
+    margin-right: 0; /* Remove margin-right */
+  }
+
+  .project-image_inline {
+    margin-top: 20px; /* Space above the image when stacked */
+  }
 }
