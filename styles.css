@@ -72,6 +72,7 @@ body::before {
   --clr-overlay: #ffffffb9;
   --proj-bgd: rgba(177, 170, 158, 0);
   --clr-boxes: #276041a5;
+  --clr-overlay_solid: #ffffffe0;
 }
 
 .dark {
@@ -85,6 +86,7 @@ body::before {
   --clr-overlay: rgba(6, 0, 5, 0.63);
   --proj-bgd: rgba(177, 170, 158, 0);
   --clr-boxes: #b1aa9e94;
+  --clr-overlay_solid: rgba(6, 0, 5, 0.842);
 }
 
 body {
@@ -254,6 +256,77 @@ button {
 .btn--icon:active {
   transform: translateY(-5px);
 }
+
+
+
+/* Navigation List */
+.nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav__list-item {
+  float: left;
+}
+
+.nav__list-item a, .dropbtn {
+  display: inline-block;
+  color: var(--clr-fg-alt);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Dropdown Button */
+.dropdown {
+  display: inline-block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; Green background on hover */
+  color: var(--clr-primary); /* White text color on hover */
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--clr-overlay_solid);
+  min-width: 160px;
+  box-shadow: var(--shadow);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--clr-primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--clr-overlay_solid);
+color: var(--clr-fg-alt)
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: var(--clr-overlay_solid);
+  /* color: var(--clr-fg-alt) */
+
+}
+
 
 /*========
   layout
