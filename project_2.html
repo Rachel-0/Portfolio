@@ -47,23 +47,14 @@
 
         <div class="Project_content-container">
           <p class="about__desc_proj_2col">
-              The data provided typically includes a unique applicant ID, academic background,
-              demographic variables, home location, application date, and enrolment status
-              (enrolled or didn't enroll). These data are first cleaned which usually involves
-              deduplicating rows, handling null values, checking variable distributions and proportions,
-              using NLP techniques to clean and validate applicant postcodes.
+              ...
               <br>
-              <br> The data are then enriched by
-              geolocating the home address, calculating the distance to campus (Haversine distance),
-              and merging the Index of Multiple Deprivation (IMD) with the applicant data on location.
-              This is done using the Geopandas library with a spatial join on applicant postcode (point)
-              and LSOA area (polygon).
+              <br> ...
           <!-- </p> -->
             <div class="image-container">
               <img src="imd_student_loc_edited.png" alt="Project Image" class="project-image_inline">
               <p class="figure_desc_inline">
-                  Heatmap showing applicant location and corresponding IMD score for their postcode. 
-                  Higher scores indicate higher levels of deprivation.
+                  ...
               </p>
             </p>
         </div>
@@ -72,51 +63,27 @@
 
         <h2 class="project-subtitle">Modelling</h2>
         <p class="about__desc_proj">
-          The data are by nature unbalanced because a typical university enrols approximately 20% 
-          of applicants. To correct this and improve the accuracy of the model, SMOTE was used 
-          to produce dummy data for the training sample following an 80-20 train lest split.
-           t tests and chi-square tests were used to
-           inform feature selection. The features for which enrolment status had a significant 
-           effect were entered into the initial model. Logistic regression was the performed on 
-           the training sample of data using the selected features. The Statsmodels library was used. 
-           Distance to campus followed by 
-           age were typically the best predictors of enrolment status. IMD score and a subset 
-           of the IMD, education score were often significant predictors in addition.
+          ...
            <br>
-           <br> A final model was selected based on the F1 score in the regression while 
-           looking for a balance between precision and recall, and by observing the confusion matrix.
-           Multicolinearity was avoided by selecting variables with minimal or no correlation.
-           The model was then applied to the original dataset (without SMOTE) in order to calculate 
-          the predicted probability that each applicant would enrol. For the purpose of this 
-          project it was important to observe a non-binary distribution of predicted probabilities.
-          This allows for applicants to be grouped by enrolment likelihood, for sufficient quantity 
-          in each group, and for these groups to be demarcated. A total of four segmentation groups
-          was considered a practical number to allow universities to make business decisions.
+           <br> ...
           <br> 
         </p>
         
         <img src="segmentation_correlation_matrix_alpha.png" alt="Project Image" class="project-image", style="width: 600px; height: auto;">
         <p class="figure_desc">
-          Correlation matrix demonstrating the relationships between selected features for
-           one example model. Colours indicate probability of enrolment.
+          ...
         </p>
 
         <img src="propensity_fig.png" alt="Project Image" class="project-image", style="width: 600px; height: auto;">
         <p class="figure_desc">
-          Volume of applicants in each segmented group and their corresponding propensity for enrolment.
+          ...
         </p>
 
 
         
         <h2 class="project-subtitle">Conclusion</h2>
         <p class="about__desc_proj">
-          This analysis was performed separately for clearing applicants and for each faculty,
-          campus and level of study the university required, subject to sample size. For some clients,
-           the impact of covid was also assessed.
-          Descriptive statistics of each segmented group were presented to the university
-          along with expert domain business advice from my colleauges. This included competitor 
-          market share for these applicants, advice on entry requirements, and advice on how to 
-          use these findings to target marketing efforts based on location and messaging.
+          ...
         </p>
       </section>
   
